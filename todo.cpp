@@ -27,7 +27,7 @@ struct Task {
         }
         
         // Setters
-        void setDescription(const std::string& desc) {
+        void setDescription(const std::string desc) {
             description = desc;
         }
 
@@ -49,8 +49,22 @@ struct TodoApp {
     public:
         void add_task(std::string description){
             tasks.push_back(Task(next_id, description));
-            next_id += 1;
+            next_id++;
             std::cout << "Task added!" << '\n';
+        }
+        
+        void view_task(){
+            if (tasks.empty()){
+                std::cout << "No tasks yet" << '\n';
+            } else {
+                for (int i = 0; i < tasks.size(); i++){
+                    std::cout << tasks[i].getId() << ". " << tasks[i].getDescription() << '\n';
+                }
+            }
+        }
+
+        void delete_task(int task_id){
+
         }
 };
 
@@ -79,14 +93,17 @@ int main(){
         if (choice == 1){
             std::string desc;
             std::cout << "Enter a description: ";
+
             std::cin >> desc;
+            std::getline(std::cin, desc);
+
             app.add_task(desc);
         } else if (choice == 2){
-            // view task
+            app.view_task();
 
         } else if (choice == 3){
             // delete task
-
+            
         } else if (choice == 4){
             // toggle task
 
