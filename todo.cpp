@@ -64,7 +64,7 @@ struct TodoApp {
         }
 
         void delete_task(int task_id){
-
+            tasks.erase(tasks.begin() + (task_id - 1));
         }
 };
 
@@ -92,18 +92,19 @@ int main(){
 
         if (choice == 1){
             std::string desc;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Enter a description: ";
-
-            std::cin >> desc;
             std::getline(std::cin, desc);
-
             app.add_task(desc);
         } else if (choice == 2){
             app.view_task();
 
         } else if (choice == 3){
-            // delete task
-            
+            int task_id;
+            std::cout << "Enter task id: ";
+            std::cin >> task_id; 
+            app.delete_task(task_id);
+
         } else if (choice == 4){
             // toggle task
 
