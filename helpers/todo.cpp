@@ -2,14 +2,16 @@
 #include <vector>
 #include <limits>
 
-struct Task {
+// split into classes 
+
+class Task {
     private:
-        int id ;
+        int id;
         std::string description;
         bool completed;
 
     public:
-        // Constructor
+        // Constructor - remove 
         Task(int id, std::string description, bool completed = false)
         : id(id), description(description), completed(completed) {}
 
@@ -41,7 +43,7 @@ struct Task {
         } 
 };
 
-struct TodoApp {
+class TodoApp {
     private:
         std::vector<Task> tasks;
         int next_id = 1; 

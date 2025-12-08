@@ -3,6 +3,3 @@ jira.md
 
 # Ignore all compiled Windows executables
 *.exe
-
-# Ignore all Python scripts
-*.py
