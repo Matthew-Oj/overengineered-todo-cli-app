@@ -15,4 +15,4 @@ void Task::setDescription(const std::string& desc) { description = desc; }
 void Task::setCompleted(bool value) { completed = value; }
 
 // Helper
-void Task::toggleCompleted() { completed = !completed; }
+bool Task::toggleCompleted() { completed = !completed; return completed;}

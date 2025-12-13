@@ -20,11 +20,12 @@ int main(){
         if (std::cin.fail()) {
             std::cin.clear(); 
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            std::cout << "Invalid input. Please enter a number.\n";
+            std::cout << "Invalid input. Please enter a number." << "\n\n";
             continue; 
         }
 
         if (choice == 1){
+            // Add Task 
             std::string desc;
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Enter a description: ";
@@ -34,15 +35,22 @@ int main(){
             app.view_task();
 
         } else if (choice == 3){
+            // Delete Task
             int task_id;
             std::cout << "Enter task id: ";
             std::cin >> task_id; 
             app.delete_task(task_id);
 
         } else if (choice == 4){
-            // toggle task
+            // Toggle task
+            int task_id;
+            std::cout << "Enter task id: ";
+            std::cin >> task_id;
+            app.toggle_task(task_id); 
+            
 
         } else if (choice == 5){
+            // Quit 
             std::cout << "Goodbye!";
             break;
         } else {

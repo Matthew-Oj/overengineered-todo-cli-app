@@ -3,6 +3,8 @@
 #include <vector>
 #include "task.h"
 #include <iostream>
+#include <algorithm>
+
 
 class TodoApp {
 private:
@@ -16,4 +18,5 @@ public:
     void add_task(const std::string& description);
     void view_task() const;
     void delete_task(int task_id);
+    void toggle_task(int task_id);
 };

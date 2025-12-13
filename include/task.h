@@ -21,5 +21,5 @@ public:
     void setCompleted(bool value);
 
     // Optional helper
-    void toggleCompleted();
+    bool toggleCompleted();
 };

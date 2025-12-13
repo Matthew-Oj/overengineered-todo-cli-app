@@ -24,7 +24,7 @@ This project was created as a **learning exercise** to explore:
 
 ## Project Structure
 
-```
+```ini
 todo/
 ├─ include/
 │   ├─ task.h
@@ -72,7 +72,7 @@ cmake --build .
 * This is intentionally **overengineered** for a simple CLI app
 * Designed for learning:
 
-  * Class implementation and modular design in C++
-  * Build tools like CMake
-  * Docker-based development
-  * Better Git commit practices using Jira tickets
+   * Class implementation and modular design in C++
+   * Build tools like CMake
+   * Docker-based development
+   * Better Git commit practices using Jira tickets
