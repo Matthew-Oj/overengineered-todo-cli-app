@@ -40,6 +40,12 @@ todo/
 
 ---
 
+## Jira 
+This project is complex enough that I created a **Jira board** to manage tasks and track progress.  
+
+![Jira Board](assets/images/jira.png)
+
+---
 ## Build & Run
 
 ### Using g++
@@ -53,11 +59,24 @@ g++ src/*.cpp -I include -o todo.exe
 ### Using CMake (optional)
 
 ```bash
+# 1. Create a separate build directory
 mkdir build
 cd build
-cmake ..
+
+# 2. Configure the project
+# Windows (MinGW):
+cmake -G "MinGW Makefiles" ..
+# Linux/macOS:
+# cmake ..
+
+# 3. Build the project
 cmake --build .
-./todo.exe
+
+# 4. Run the executable
+# Windows
+.\todo.exe
+# Linux/macOS
+# ./todo
 ```
 
 ### Using Docker (optional)
