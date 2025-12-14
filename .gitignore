@@ -32,6 +32,7 @@ Makefile
 *.ipch
 *.pdb
 *.vcxproj.filters
+.vscode/
 
 # CLion / JetBrains
 .idea/
