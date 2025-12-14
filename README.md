@@ -10,8 +10,6 @@ This project was created as a **learning exercise** to explore:
 * Using **Docker** for consistent development environments
 * Following better **Git commit practices** with tools like **Jira**
 
----
-
 ## Features
 
 * Add, view, and delete tasks
@@ -19,8 +17,6 @@ This project was created as a **learning exercise** to explore:
 * Task completion toggle (planned)
 * Each task has an ID, description, and completion status
 * Modular design using separate `.h` and `.cpp` files
-
----
 
 ## Project Structure
 
@@ -38,14 +34,12 @@ todo/
 * `include/` — Header files for classes
 * `src/` — Source files and `main.cpp`
 
----
+## Jira
 
-## Jira 
-This project is complex enough that I created a **Jira board** to manage tasks and track progress.  
+This project is complex enough that I created a **Jira board** to manage tasks and track progress.
 
 ![Jira Board](assets/images/jira.png)
 
----
 ## Build & Run
 
 ### Using g++
@@ -81,10 +75,15 @@ cmake --build .
 
 ### Using Docker (optional)
 
-* Build a Docker image with C++ toolchain
-* Compile and run the app inside a container for reproducibility
+Build and run the app in a container:
 
----
+```bash
+# Build the Docker image
+docker build -t todo-app .
+
+# Run interactively (allows input)
+docker run -it --rm todo-app
+```
 
 ## Notes
 

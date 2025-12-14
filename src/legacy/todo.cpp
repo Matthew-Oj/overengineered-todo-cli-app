@@ -59,7 +59,7 @@ class TodoApp {
             if (tasks.empty()){
                 std::cout << "No tasks yet" << '\n';
             } else {
-                for (int i = 0; i < tasks.size(); i++){
+                for (size_t i = 0; i < tasks.size(); i++){
                     std::cout << tasks[i].getId() << ". " << tasks[i].getDescription() << '\n';
                 }
             }
