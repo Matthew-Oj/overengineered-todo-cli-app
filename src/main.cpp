@@ -11,7 +11,8 @@ int main(){
         std::cout << "2. View Tasks" << '\n';
         std::cout << "3. Delete Task" << '\n';
         std::cout << "4. Toggle Complete" << '\n';
-        std::cout << "5. Quit" << '\n';
+        std::cout << "5. File (Save/Load)" << '\n';
+        std::cout << "6. Quit" << '\n';
 
         int choice; 
         std::cout << "Choose an option: ";
@@ -32,6 +33,7 @@ int main(){
             std::getline(std::cin, desc);
             app.add_task(desc);
         } else if (choice == 2){
+            // View Tasks 
             app.view_task();
 
         } else if (choice == 3){
@@ -47,10 +49,12 @@ int main(){
             std::cout << "Enter task id: ";
             std::cin >> task_id;
             app.toggle_task(task_id); 
-            
 
         } else if (choice == 5){
-            // Quit 
+
+        
+        } else if (choice == 6){
+            // Quit App
             std::cout << "Goodbye!";
             break;
         } else {
